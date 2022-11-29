@@ -1,0 +1,18 @@
+class Solution {
+    static Long reversedBits(Long X) {
+        long res = 0;
+        int c = 32;
+        while(c>0)
+        {
+            res<<=1;
+            if((X&1)==1)
+            {
+                res=res^1;
+            }
+            X>>=1;
+            c--;
+        }
+        return res;
+    
+    }
+}
